@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving5_2",
+            "request": "launch",
+            "mainClass": "Oving5_2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Intervallklient",
+            "request": "launch",
+            "mainClass": "Intervallklient"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving5_1",
+            "request": "launch",
+            "mainClass": "Oving5_1"
+        }
+    ]
+}
