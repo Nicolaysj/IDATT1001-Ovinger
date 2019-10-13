@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving7_2",
+            "request": "launch",
+            "mainClass": "Oving7_2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oppg1",
+            "request": "launch",
+            "mainClass": "Oppg1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving7_1",
+            "request": "launch",
+            "mainClass": "Oving7_1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oppg1",
+            "request": "launch",
+            "mainClass": "Oppg1",
+            "projectName": "Øving 7_9964dee9"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving7_1",
+            "request": "launch",
+            "mainClass": "Oving7_1",
+            "projectName": "Øving 7_9964dee9"
+        }
+    ]
+}
