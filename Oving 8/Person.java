@@ -1,17 +1,20 @@
 public final class Person{
-    private String navn;
-    private String etternavn;
-    private String aar;
+    final String navn;
+    final String etternavn;
+    final int dato;
+
+    public Person(String fNavn, String eNavn, int fDato){
+        navn = fNavn;
+        etternavn = eNavn;
+        dato = fDato;
+    }
 
     public String getNavn(){
-        return navn;
+        return navn + " " + etternavn;
     }
 
-    public String getEtternavn(){
-        return etternavn;
-    }
 
-    public String getAar(){
-        return aar;
+    public int getDato(){
+        return dato;
     }
 }

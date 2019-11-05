@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-
 public class Analyse {
     private final String Text;
 
@@ -45,7 +40,7 @@ public class Analyse {
      */
     // simple is always better
     public int gjenLengde() {
-        List<List<String>> lst = new ArrayList<>();
+        //List<List<String>> lst = new ArrayList<>();
         String[] setning = (this.getText().split("[.:!?-]+"));
 
         int antallOrd = 0;

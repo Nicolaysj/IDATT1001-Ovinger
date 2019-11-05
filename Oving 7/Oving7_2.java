@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class Oving7_2 {
 

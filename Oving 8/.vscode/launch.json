@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving8_1",
+            "request": "launch",
+            "mainClass": "Oving8_1",
+            "projectName": "Oving 8_9b720b05"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "mads.Main",
+            "projectName": "Oving 8_9b720b05"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - madsMain",
+            "request": "launch",
+            "mainClass": "madsMain",
+            "projectName": "Oving 8_9b720b05"
+        }
+    ]
+}

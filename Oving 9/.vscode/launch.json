@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving9",
+            "request": "launch",
+            "mainClass": "Oving9",
+            "projectName": "Oving 9_9b720b06"
+        }
+    ]
+}
