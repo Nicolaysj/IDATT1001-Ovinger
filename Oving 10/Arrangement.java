@@ -4,10 +4,6 @@ public class Arrangement {
 
     private int ArgNr, ArgType, Date;
     private String ArgName, Location, Organizer;
-    //private String Location;
-    //private String Organizer;
-    //private int ArgType;
-    //private int Date;
 
 
     public Arrangement(int ArgNr, String ArgName, String Loc, String Org, int ArgType, int Date) {
