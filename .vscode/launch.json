@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Oving10_2",
+            "request": "launch",
+            "mainClass": "Oving10_2",
+            "projectName": "ovinger_6375a940"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",

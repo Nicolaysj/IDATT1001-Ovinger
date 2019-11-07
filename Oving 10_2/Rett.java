@@ -1,14 +1,8 @@
 public class Rett{
     private String Name, Type, Recipe;
     private double Price;
-    public static final List<String> TYPE;
 
-    static {
-        String[] typer = {"forrett", "hovedrett", "dessert"};
-        TYPE = new ArrayList<>(Arrays.asList(typer));
-    }
-
-    public Rett(String Type, String Name, int Price, String Recipe) {
+    public Rett(String Type, String Name, double Price, String Recipe) {
         this.Type = Type;
         this.Name = Name;
         this.Price = Price;
