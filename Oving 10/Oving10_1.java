@@ -1,48 +1,48 @@
 import static javax.swing.JOptionPane.*;
 
-public class Main {
+public class Oving10_1 {
     public static void main(String[] args) {
 
-        Arrangement a1 = new Arrangement(1, "Konsert", "Spektrum", "Konsertprodusent", "Konsert", 201901011800L);
-        Arrangement a2 = new Arrangement(2, "Disco", "Bodega", "UKA", "Fest", 202001010000L);
-        Arrangement a3 = new Arrangement(3, "Rave", "Bodega", "Tihlde", "Fest", 202001012000L);
-        Arrangement a4 = new Arrangement(4, "Fest", "Spektrum", "Tihlde", "Bedpres", 202101022200L);
-        Arrangement a5 = new Arrangement(5, "Vinsmaking", "Scandic", "Kildevangen", "Bedpres", 201001022200L);
+        Arrangement a1 = new Arrangement(1, "John Mayer", "Oslo Spektrum", "JM Productions", "Konsert", 201910032000L);
+        Arrangement a2 = new Arrangement(2, "John Mayer", "Trondheim Spektrum", "JM Productions", "Konsert", 201910042000L);
+        Arrangement a3 = new Arrangement(3, "Hawaiitur", "Oahu, Hawaii", "Familytrips", "Reise", 201912211000L);
+        Arrangement a4 = new Arrangement(4, "Botfest", "Der det skjer", "Tihlde Pythons", "Botfest", 202001022200L);
+        Arrangement a5 = new Arrangement(5, "Julebord", "Rockheim", "Tihlde", "Sosialt", 201911212000L);
 
-        ArrangementRegister oversikt = new ArrangementRegister();
+        ArrangementRegister Arrangementer = new ArrangementRegister();
 
-        Arrangementer.registrer(a1);
-        Arrangementer.registrer(a2);
-        Arrangementer.registrer(a3);
-        Arrangementer.registrer(a4);
-        Arrangementer.registrer(a5);
+        Arrangementer.Registrer(a1);
+        Arrangementer.Registrer(a2);
+        Arrangementer.Registrer(a3);
+        Arrangementer.Registrer(a4);
+        Arrangementer.Registrer(a5);
 
         String[]muligheter = {"Sorter sted", "Sorter type", "Sorter tidspunkt", "Skjekk sted", "Skjekk dato", "Skjekk mellom 2 datoer", "Avslutt"};
 
         while (true){
-            int valg = showOptionDialog(null, "Hva vil du gjøre?", "Øving 10 a", 0, QUESTION_MESSAGE, null, muligheter, muligheter[0]);
+            int valg = showOptionDialog(null, "Hva vil du gjoere?", "oeving 10 a", 0, QUESTION_MESSAGE, null, muligheter, muligheter[0]);
             switch (valg) {
                 case 0:
-                    showMessageDialog(null, "Steder sortert:\n" + oversikt.sorterSted());
+                    showMessageDialog(null, "Steder sortert:\n" + Arrangementer.sorterSted());
                     break;
                 case 1:
-                    showMessageDialog(null, "Typer sortert:\n" + oversikt.sorterType());
+                    showMessageDialog(null, "Typer sortert:\n" + Arrangementer.sorterType());
                     break;
                 case 2:
-                    showMessageDialog(null,"Tidspunkt sortert:\n" + oversikt.sorterTidspunkt());
+                    showMessageDialog(null,"Tidspunkt sortert:\n" + Arrangementer.sorterTidspunkt());
                     break;
                 case 3:
-                    String sted = showInputDialog(null, "Skriv inn et sted" + oversikt.stedNavn());
-                    showMessageDialog(null," Arrangementer på " + sted + " er " + oversikt.finnSted(sted));
+                    String sted = showInputDialog(null, "Skriv inn et sted" + Arrangementer.stedNavn());
+                    showMessageDialog(null," Arrangementer - " + sted + " er " + Arrangementer.finnSted(sted));
                     break;
                 case 4:
                     long dato = Long.parseLong(showInputDialog(null, "Velg dato"));
-                    showMessageDialog(null, "Arrangementene på dato " + dato + " er: " + oversikt.finnDato(dato));
+                    showMessageDialog(null, "Arrangementene paa dato " + dato + " er: " + Arrangementer.finnDato(dato));
                     break;
                 case 5:
-                    int dato1 = Integer.parseInt(showInputDialog(null,"Skriv inn dato 1"));
-                    int dato2 = Integer.parseInt(showInputDialog(null,"Skriv inn dato 2"));
-                    showMessageDialog(null, " Arrangementene mellom " + dato1 + " og " + dato2 + " er " + oversikt.Intervall(dato1, dato2));
+                    long dato1 = Long.parseLong(showInputDialog(null,"Skriv inn dato 1"));
+                    long dato2 = Long.parseLong(showInputDialog(null,"Skriv inn dato 2"));
+                    showMessageDialog(null, " Arrangementene mellom " + dato1 + " og " + dato2 + " er " + Arrangementer.Intervall(dato1, dato2));
                     break;
                 default:
                     return;

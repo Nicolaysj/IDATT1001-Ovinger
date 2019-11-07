@@ -1,12 +1,11 @@
-import java.util.*;
-
 public class Arrangement {
 
-    private int ArgNr, ArgType, Date;
-    private String ArgName, Location, Organizer;
+    private int ArgNr;
+    private long Date;
+    private String ArgName, Location, Organizer, ArgType;
 
 
-    public Arrangement(int ArgNr, String ArgName, String Loc, String Org, int ArgType, int Date) {
+    public Arrangement(int ArgNr, String ArgName, String Loc, String Org, String ArgType, long Date) {
         this.ArgNr = ArgNr;
         this.ArgName = ArgName;
         this.Location = Loc;
@@ -31,16 +30,16 @@ public class Arrangement {
         return Organizer;
     }
 
-    public int getArgType() {
+    public String getArgType() {
         return ArgType;
     }
 
-    public int getDate() {
+    public long getDate() {
         return Date;
     }
 
     public String toString() {
         return ("\nNavn: " + getArgName() + "\nArrangement nummer: " + getArgNr() + 
-        "\nSted: " +  getLocation() + "\nType: " +  getArgType() + "\nDato: " + getDate() + "\nArrangør: " + getOrganizer());
+        "\nSted: " +  getLocation() + "\nType: " +  getArgType() + "\nDato: " + getDate() + "\nArrangoer: " + getOrganizer());
     }
 }
