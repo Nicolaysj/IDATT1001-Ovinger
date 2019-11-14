@@ -1,23 +1,23 @@
 import java.util.*;
 import java.util.ArrayList;
 
-public class RealEstateReg {
+public class EiendomsRegister {
 
-    private ArrayList<RealEstate> realEstates = new ArrayList<>();
+    private ArrayList<Eiendom> realEstates = new ArrayList<>();
 
-    public RealEstateReg(ArrayList<RealEstate> realEstates) {
+    public EiendomsRegister(ArrayList<Eiendom> realEstates) {
         this.realEstates = realEstates;
     }
 
-    public RealEstate newRealEstate(int komNr, String komNavn, int gnr, int bnr, String bruksNavn, double areal, String eier) {
-        RealEstate newReal = new RealEstate(komNr, komNavn, gnr, bnr, bruksNavn, areal, eier);
+    public Eiendom newRealEstate(int komNr, String komNavn, int gnr, int bnr, String bruksNavn, double areal, String eier) {
+        Eiendom newReal = new Eiendom(komNr, komNavn, gnr, bnr, bruksNavn, areal, eier);
         realEstates.add(newReal);
         return newReal;
     }
 
     public String delRealEstate(int komNr, int gnr, int bnr) {
 
-        RealEstate r = listWNum(komNr, gnr, bnr);
+        Eiendom r = listWNum(komNr, gnr, bnr);
         System.out.println(r);
         if(r == null) {
             return "Noe gikk galt, fant ikke eiendommen...\n";
@@ -35,11 +35,11 @@ public class RealEstateReg {
         return realEstates;
     }
 
-    public RealEstate listWNum(int komNr, int gnr, int bnr) {
-        Iterator<RealEstate> iterator = realEstates.iterator();
+    public Eiendom listWNum(int komNr, int gnr, int bnr) {
+        Iterator<Eiendom> iterator = realEstates.iterator();
 
         while(iterator.hasNext()) {
-            RealEstate nEstate = iterator.next();
+            Eiendom nEstate = iterator.next();
             if(nEstate.getKomNr() == komNr && nEstate.getGnr() == gnr && nEstate.getBnr() == bnr) {
                 return nEstate;
             }
@@ -49,11 +49,11 @@ public class RealEstateReg {
     }
 
     public ArrayList findAllGnr(int gnr) {
-        ArrayList<RealEstate> rEstates = new ArrayList<>();
-        Iterator<RealEstate> iterator = realEstates.iterator();
+        ArrayList<Eiendom> rEstates = new ArrayList<>();
+        Iterator<Eiendom> iterator = realEstates.iterator();
 
         while(iterator.hasNext()) {
-            RealEstate n = iterator.next();
+            Eiendom n = iterator.next();
             if(n.getGnr() == gnr) {
                 rEstates.add(n);
             }
@@ -66,12 +66,12 @@ public class RealEstateReg {
     }
 
     public double avgArea() {
-        Iterator<RealEstate> iterator = realEstates.iterator();
+        Iterator<Eiendom> iterator = realEstates.iterator();
         double totArea = 0;
 
         while(iterator.hasNext()) {
-            RealEstate e = iterator.next();
-            totArea += e.getArea();
+            Eiendom e = iterator.next();
+            totArea += e.getAreal();
         }
 
         return totArea/realEstates.size();

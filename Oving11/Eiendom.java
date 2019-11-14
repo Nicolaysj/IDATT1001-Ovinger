@@ -5,7 +5,7 @@ public class Eiendom {
     private String komNavn, bruksNavn, eier;
 
 
-    public Eiendom(int komNr, int gnr, int bnr, double areal, String komNavn, String bruksNavn, String eier) {
+    public Eiendom(int komNr, String komNavn, int gnr, int bnr, String bruksNavn, double areal, String eier) {
         this.komNr = komNr;
         this.gnr = gnr;
         this.bnr = bnr;

@@ -5,30 +5,30 @@ public class Oving11 {
 
     public static Scanner s = new Scanner(System.in);
 
-    public static RealEstate nr1 = new RealEstate(1445, "Gloppen", 77, 631, "", 1017.6, "Jens Olsen");
-    public static RealEstate nr2 = new RealEstate(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen");
-    public static RealEstate nr3 = new RealEstate(1446, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen");
-    public static RealEstate nr4 = new RealEstate(1446, "Gloppen", 74, 188, "", 1457.2, "Karl Ove Bråten");
-    public static RealEstate nr5 = new RealEstate(1446, "Gloppen", 69, 47, "Høiberg", 1339.4, "Elsa Indregård");
-    public static ArrayList<RealEstate> estates = new ArrayList<>(Arrays.asList(nr1, nr2, nr3, nr4, nr5));
+    public static Eiendom nr1 = new Eiendom(1445, "Gloppen", 77, 631, "", 1017.6, "Jens Olsen");
+    public static Eiendom nr2 = new Eiendom(1445, "Gloppen", 77, 131, "Syningom", 661.3, "Nicolay Madsen");
+    public static Eiendom nr3 = new Eiendom(1446, "Gloppen", 75, 19, "Fugletun", 650.6, "Evilyn Jensen");
+    public static Eiendom nr4 = new Eiendom(1446, "Gloppen", 74, 188, "", 1457.2, "Karl Ove Braaten");
+    public static Eiendom nr5 = new Eiendom(1446, "Gloppen", 69, 47, "Hoeiberg", 1339.4, "Elsa Indregaard");
+    public static ArrayList<Eiendom> estates = new ArrayList<>(Arrays.asList(nr1, nr2, nr3, nr4, nr5));
 
     public static void main(String [] args) {
     menu();
     }
 
     public static void menu() {
-        RealEstateReg realEstates = new RealEstateReg(estates);
+        EiendomsRegister realEstates = new EiendomsRegister(estates);
 
         while(true) {
-            System.out.println("Velkommen til dette dritt programmet. Du kan nå velge mellom:\n" +
+            System.out.println("Velkommen til dette dritt programmet. Du kan naa velge mellom:\n" +
             "0. Avslutt\n" +
             "1. Registrere en ny eiendom\n" +
             "2. Skrive ut alle eiendommer som er registrert\n" + 
-            "3. Søke etter eiendom basert på kommunoenr, gnr og bnr\n" +
+            "3. Soeke etter eiendom basert paa kommunoenr, gnr og bnr\n" +
             "4. Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret\n" + 
             "5. Fjerne en eiendom\n" + 
             "6. Skrive ut antall eiendommer\n" + 
-            "7. Skriv ut alle eiendommer med et gårdsnummer"
+            "7. Skriv ut alle eiendommer med et gaardsnummer"
             );
             
             int choice = s.nextInt();
@@ -63,7 +63,7 @@ public class Oving11 {
                     System.out.println(realEstates.listAll().toString());
                     break;
                 case 3:
-                    System.out.println("Søke etter eiendom basert på kommunoenr, gnr og bnr");
+                    System.out.println("Soeke etter eiendom basert paa kommunoenr, gnr og bnr");
                     System.out.println("Kommune nr?");
                     komNr = s.nextInt();
                     System.out.println("Gnr?");
@@ -90,10 +90,10 @@ public class Oving11 {
                     System.out.println("\nAntall eiendommer er: " + realEstates.numReal() + "\n");
                     break;
                 case 7:
-                    System.out.println("Finn eiendommer med et gårdsnummer");
-                    System.out.println("Hvilket gårdsnummer vil du bruke?");
+                    System.out.println("Finn eiendommer med et gaardsnummer");
+                    System.out.println("Hvilket gaardsnummer vil du bruke?");
                     gnr = s.nextInt();
-                    System.out.println("Fant følgende eiendommer: \n" + realEstates.findAllLotNum(gnr).toString());
+                    System.out.println("Fant foelgende eiendommer: \n" + realEstates.findAllGnr(gnr).toString());
                     break;
                 default: 
                     System.out.println("Du skrev inn noe feil...");
