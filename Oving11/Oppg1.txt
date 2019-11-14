@@ -1,0 +1,1 @@
+Klassen "Eiendom" må samarbeide med "EiendomsRegister" slik at flere ulike Eiendommer kan registreres og legges i ArrayListen. I tillegg så må EiendomsRegister-klassen ha metoder som main klassen kan hente og printe ut.
